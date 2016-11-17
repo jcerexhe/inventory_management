@@ -21,4 +21,8 @@ class PagesController < ApplicationController
 
     @date = Time.now.strftime('%d %B %Y')
   end
+
+  def settings
+    @users = User.all
+  end
 end

@@ -1,0 +1,28 @@
+<h1>Settings</h1>
+
+<h3>Email addresses with accounts</h3>
+
+<table id="datatable" class="table display no-wrap">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Last online</th>
+      <th>Login count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.last_sign_in_at.strftime('%d/%m/%y') %></td>
+        <td><%= user.sign_in_count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>Company</h3>
+
+<p>Upload logo (Coming soon)</p>
+<p>Change Company Name (Coming soon)</p>

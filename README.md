@@ -1,4 +1,4 @@
-# README
+# Inventory Management
 
 This is a basic inventory system designed for small businesses. If you would like a version of this for your store please email jcerexhe@gmail.com.
 
@@ -15,3 +15,4 @@ Features yet to be implemented:
 - Scheduled email reminders to do an inventory check
 - Automatically measure month-to-month fluctuation in stock quantity
 - Automatically suggest price by markup ratio
+- Settings panel to change logo etc for white labelling
