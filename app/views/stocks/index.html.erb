@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Store Inventory</h1>
+
+<%= link_to '+ Add a new item', new_stock_path, class: 'btn btn-success spacer' %>
+
+<table id="datatable" class="table display no-wrap">
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Stock type</th>
+      <th>Model</th>
+      <th>Colour</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stocks.each do |stock| %>
+      <tr class="<%= recently_updated(stock) ? '' : 'old' %>">
+        <td><%= stock.brand %></td>
+        <td><%= stock.stock_type %></td>
+        <td><%= stock.model %></td>
+        <td><%= stock.colour %></td>
+        <td><%= number_to_currency(stock.price) %></td>
+        <td><%= stock.quantity %></td>
+        <td><%= link_to 'Edit', edit_stock_path(stock), class: 'btn btn-success btn-xs' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>* A yellow background means that the item hasn't been updated in over a month.</p>

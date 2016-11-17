@@ -1,0 +1,36 @@
+<%= simple_form_for(@stock) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :brand %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :stock_type, placeholder: 'e.g. Pen, Paper, Notebook...' %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :model %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :colour %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :serial_number %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :cost, placeholder: 'Supplier cost for the store to purchase' %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :price, placeholder: 'Price for customers' %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.input :quantity %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-success' %>
+  </div>
+<% end %>

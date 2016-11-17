@@ -1,0 +1,17 @@
+<h1>Inventory Analytics</h1>
+
+<h4><%= @date %></h4>
+
+<p><b>Total Cost</b></p>
+<p><%= number_to_currency(@inventory_cost_total) %></p>
+<p><b>Total Sale Value</b></p>
+<p><%= number_to_currency(@inventory_price_total) %></p>
+
+<p><b>Number of items in stock</b></p>
+<p><%= @inventory_quantity %></p>
+
+<p><b>Average Stock Cost</b></p>
+<p><%= number_to_currency(@ave_cost) %></p>
+
+<p><b>Average Stock Price</b></p>
+<p><%= number_to_currency(@ave_price) %></p>

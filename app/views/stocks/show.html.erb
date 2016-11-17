@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @stock.brand %>
+</p>
+
+<p>
+  <strong>Stock type:</strong>
+  <%= @stock.stock_type %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @stock.model %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @stock.colour %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @stock.serial_number %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @stock.cost %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @stock.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @stock.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>
