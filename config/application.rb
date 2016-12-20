@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module PepesInventory
   class Application < Rails::Application
+    require 'csv'
+    require 'iconv'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

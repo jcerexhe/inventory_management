@@ -2,7 +2,32 @@
 
 <h1>Store Inventory</h1>
 
-<%= link_to '+ Add a new item', new_stock_path, class: 'btn btn-success spacer' %>
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4>Add New Stock</h4>
+          </div>
+          <div class="col-sm-6">
+            <h5>Add an individual item</h5>
+            <%= link_to 'Add', new_stock_path, class: 'btn btn-success spacer' %>
+          </div>
+          <div class="col-sm-6">
+            <h5>Import from CSV</h5>
+
+            <%= form_tag import_stocks_path, multipart: true do %>
+              <%= file_field_tag :file, class: "file-upload" %>
+              <%= submit_tag "Import", class: "btn btn-success" %>
+            <% end %>
+            <p>* File must be in CSV format (.csv)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <table id="datatable" class="table display no-wrap">
   <thead>

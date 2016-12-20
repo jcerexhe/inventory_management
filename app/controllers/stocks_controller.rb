@@ -1,6 +1,11 @@
 class StocksController < ApplicationController
   before_action :set_stock, only: [:show, :edit, :update, :destroy]
 
+  def import
+    Stock.import(params[:file])
+    redirect_to root_url, notice: "Stock imported."
+  end
+
   def index
     @stocks = Stock.all
   end
